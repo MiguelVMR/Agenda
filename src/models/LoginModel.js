@@ -20,7 +20,6 @@ class Login {
     this.valida();
     if(this.errors.length > 0) return;
     try{
-
         this.user = await LoginModel.create(this.body);
     } catch (e){
         console.log(e);
