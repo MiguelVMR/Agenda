@@ -3,24 +3,28 @@
 
 
   
- <div class="containee">
+<div class="container">
   <div class="row">
     <div class="col-lg-2"></div>
 
     <div class="col-lg-8 my-3">
       <h1 class="text-center">Agenda</h1>
-      <p class="text-center lead">Seus contatos estão abaixo</p>
+      <p class="text-center lead "><strong>Seus contatos estão abaixo</strong></p>
 
       <%- include('includes/messages.ejs'); %>
 
       <div class="responsive-table">
         <table class="table my-3">
-          <tr>
-            <td>Miguel</td>
-            <td>Vilela</td>
-            <td>35984126562</td>
-            <td>miguelmvilela12@gmail.com</td>
-          </tr>
+          <% contatos.forEach(contato =>{%>
+            <tr>
+              <td><%= contato.nome %></td>
+              <td><%= contato.sobrenome %></td>
+              <td><%= contato.telefone %></td>
+              <td><%= contato.email %></td>
+              <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
+              <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a></td>
+            </tr>
+          <% }); %>
 
         </table>
       </div>
