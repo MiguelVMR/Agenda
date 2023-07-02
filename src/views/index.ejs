@@ -12,7 +12,7 @@
       <p class="text-center lead "><strong>Seus contatos estão abaixo</strong></p>
 
       <%- include('includes/messages.ejs'); %>
-
+      <% if(contatos.length > 0) { %>
       <div class="responsive-table">
         <table class="table my-3">
           <% contatos.forEach(contato =>{%>
@@ -25,10 +25,11 @@
               <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a></td>
             </tr>
           <% }); %>
-
         </table>
       </div>
-
+      <% } else { %>
+        <p class="text-center lead"><strong>Não existem contatos na sua agenda.</strong></p>
+      <% } %>
     </div>
 
     <div class="col-lg-2"></div>
