@@ -28,9 +28,8 @@ Aqui estão algumas das funcionalidades disponíveis no aplicativo:
 - Editar contatos: Permite editar os detalhes de um contato existente.
 - Excluir contatos: Permite excluir um contato da agenda.
 
-  ## Acesso
-  Foi feito o deploy desta aplicação no google cloud 
-  A seguinte aplicação pode ser acessada pelo seguinte ip  ```http://34.95.157.91/```
+  ## Deploy
+  Foi feito o deploy desta aplicação usando o recurso de VM do google cloud
 
   
 
